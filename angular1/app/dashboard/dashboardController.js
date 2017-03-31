@@ -1,13 +1,14 @@
 (function() {
   angular.module('primeiraApp').controller('DashBoardCtrl', [
     '$http',
+    'restUrl',
     DashboardController
   ])
 
-  function DashboardController($http) {
+  function DashboardController($http, restUrl) {
     const vm = this
     vm.getSummary = function() {
-      const url = 'http://localhost:3003/api/billingSummary'
+      const url = `${restUrl}/api/billingSummary`
       $http.get(url).then(function(response) {
 
         const {credit = 0, debt = 0} = response.data
