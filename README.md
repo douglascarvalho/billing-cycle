@@ -19,6 +19,9 @@ Foi realizado deploy do projeto no Heroku, que pode ser acessado neste link:
 **Nota:** Talvez demore alguns segundos para abrir pois o Heroku desliga os dynos quando o servidor para de receber requisições.
 
 ## Para realizar o Build e iniciar o servidor
+
+Garanta que o Mongo esteja rodando. 
+
 Backend:
 ```
 $ npm run production
